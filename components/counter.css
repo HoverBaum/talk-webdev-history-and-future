@@ -1,0 +1,28 @@
+.website__header {
+  background:#eee;
+	height:35px;
+  padding-left:1rem;
+  display: flex;
+  align-items: center;
+}
+
+.website__header__circle {
+	border-radius:50%;
+	float:left;
+	width:12px;
+	height:12px;
+	margin-right:6px;
+  transition: all 200ms ease-in-out;
+}
+
+.website__header .website__header__circle:nth-child(1) {
+  background:#FF3E58;
+}
+
+.website__header .website__header__circle:nth-child(2) {
+  background:#FFBF00;
+}
+
+.website__header .website__header__circle:nth-child(3) {
+  background:#00DB43;
+}

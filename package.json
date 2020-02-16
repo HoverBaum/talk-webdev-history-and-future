@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "rm -rf public && mdx-deck build deck.mdx"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",

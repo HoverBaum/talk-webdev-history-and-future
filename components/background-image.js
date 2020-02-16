@@ -22,7 +22,12 @@ export const BackgroundImage = ({ src, credit, creditLink }) => {
           right: 0;
           bottom: 0;
           left: 0;
-          background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+          background-image: linear-gradient(
+            to top right,
+            #002f4b,
+            #7473bd,
+            #dc4225
+          );
           opacity: 0.8;
         }
       `}

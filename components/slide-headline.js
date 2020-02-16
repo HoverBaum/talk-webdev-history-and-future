@@ -1,10 +1,10 @@
 import React from 'react'
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import { css } from '@emotion/core'
 import useColors from '../lib/useColors'
 
 const SlideHeadline = ({ children, sectionTitle }) => {
   const colors = useColors()
+
   return (
     <h2
       css={css`

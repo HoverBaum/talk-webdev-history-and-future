@@ -4,6 +4,7 @@ import myTheme from './lib/theme'
 export const theme = myTheme
 
 import CustomSplit from './lib/split.layout.js'
+import ImageSplit from './lib/imageSplit.layout.js'
 import Central from './lib/central.layout.js'
 
 import Quote from './components/quote'
@@ -27,6 +28,12 @@ import Website from './components/website/Website'
 import MfWebsite from './components/website/Mf-Website'
 import BetterMfWebsite from './components/website/Better-Mf-Website'
 
+
+import imgPotential from './img/potential.jpg'
+import imgHTML from './img/html.png'
+import imgCSS from './img/css.png'
+import imgJS from './img/js.png'
+
 <Head>
   <title>Webdevs history</title>
 </Head>
@@ -45,23 +52,29 @@ import BetterMfWebsite from './components/website/Better-Mf-Website'
 
 ---
 
+<SlideHeadline sectionTitle='Motivation'>🏋️‍♀️🏋️‍♂️</SlideHeadline>
+
+- Teaching ES generations
+- Building bridges
+- Reflecting my work
+
+---
+
 <SlideHeadline sectionTitle='Websites'>Simple documents</SlideHeadline>
 
 <Website resetStyles={true} title='Basic website 🖥'>
 
-<MfWebsite />
+  <MfWebsite />
 
-  </Website>
+</Website>
 
----
+<Notes>
 
-<BackgroundImage src='' />
+- Fast forwarding to HTML.
+- 1969 First connected computers (Universities in US)
+- HTML around 90s.
 
-<Quote credit='David Bowie'>
-
-I don't think we've even seen the tip of the iceberg. I think the potential of what the Internet is going to do to society both good and bad is unimaginable. I think we're on the cusp of something exhilarating and terrifying.
-
-</Quote>
+</Notes>
 
 ---
 
@@ -69,9 +82,59 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 <Website resetStyles={true} title='With style 😎'>
 
-<BetterMfWebsite />
+  <BetterMfWebsite />
 
-  </Website>
+</Website>
+
+---
+
+<Central>
+
+<BackgroundImage src={imgPotential} />
+
+<Quote credit='David Bowie (1999)'>
+
+I don't think we've even seen the tip of the iceberg. I think the potential of what the Internet is going to do to society both good and bad is unimaginable. I think we're on the cusp of something exhilarating and terrifying.
+
+</Quote>
+
+</Central>
+
+---
+
+<SlideHeadline sectionTitle='Websites'>Technologies</SlideHeadline>
+
+<ImageSplit src={imgHTML}>
+
+### HTML
+- The rock hard content
+- Semantic information about what is displayed
+
+</ImageSplit>
+
+---
+
+<SlideHeadline sectionTitle='Websites'>Technologies</SlideHeadline>
+
+<ImageSplit src={imgCSS}>
+
+### CSS (Cascading Style Sheets)
+- The look and feel
+- Multiple posibilities for same content ([cssZenGarden](http://www.csszengarden.com/))
+
+</ImageSplit>
+
+---
+
+<SlideHeadline sectionTitle='Websites'>Technologies</SlideHeadline>
+
+<ImageSplit src={imgJS}>
+
+### JavaScript
+- The interaction.
+- Do something when the user interacts with the page.
+
+</ImageSplit>
 
 ---
 

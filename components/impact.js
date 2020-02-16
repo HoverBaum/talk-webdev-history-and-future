@@ -8,8 +8,11 @@ const Impact = ({ children, size = 3, onImage }) => {
   return (
     <div
       css={css`
+        position: absolute;
+        width: 100%;
         font-size: ${size}em;
         font-weight: normal;
+        text-align: center;
         color: ${onImage ? 'white' : colors.headline};
         left: 50%;
         top: 50%;

@@ -22,7 +22,17 @@ export const Portrait = ({ src, title }) => (
       `}
       src={src}
     />
-    {title && <span>{title}</span>}
+    {title && (
+      <span
+        css={css`
+          display: block;
+          text-align: center;
+          font-size: 2rem;
+        `}
+      >
+        {title}
+      </span>
+    )}
   </div>
 )
 

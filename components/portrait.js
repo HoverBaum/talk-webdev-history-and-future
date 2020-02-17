@@ -1,19 +1,29 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-const dimension = '40rem'
+const dimension = '25rem'
 
-export const Portrait = ({ src }) => (
-  <img
-    css={{
-      width: dimension,
-      height: dimension,
-      maxWidth: '100%',
-      boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
-      borderRadius: '0.5rem 0.5rem 0 0',
-    }}
-    src={src}
-  />
+export const Portrait = ({ src, title }) => (
+  <div
+    css={css`
+      width: 100%;
+    `}
+  >
+    <img
+      css={css`
+        width: ${dimension};
+        height: ${dimension};
+        max-width: 100%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 0.5rem 0.5rem 0 0;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 2rem;
+      `}
+      src={src}
+    />
+    {title && <span>{title}</span>}
+  </div>
 )
 
 export default Portrait

@@ -39,6 +39,8 @@ import imgRequest from './img/request.png'
 import imgNode from './img/node-logo.svg'
 import imgCreative from './img/creative.jpg'
 import imgPortrait from './img/portrait.jpg'
+import imgStateFrameworks from './img/state-js-19-frameworks.png'
+import imgPWA from './img/pwa.png'
 
 <Head>
   <title>Webdevs history</title>
@@ -228,8 +230,8 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 <SlideHeadline sectionTitle='WebDev'>Make it one</SlideHeadline>
 
 - Large apps became difficult to handle.
+- Package management rose with npm.
 - Bundling was introduced.
-- With bundling came package management.
 
 <Boids/>
 
@@ -255,6 +257,7 @@ Creative years
 
 - Hip framework of the month.
 - A lot of trying things out.
+- CSS pre-processing.
 
 </Notes>
 
@@ -263,62 +266,72 @@ Creative years
 <SlideHeadline sectionTitle='WebDev'>Becoming boring</SlideHeadline>
 
 - Big frameworks
-- Stability
 - Webpack
 - Babel
+- ES modules
+- SASS
 
 <Boids />
 
 <Notes>
 
 - JS is constantly evolving but backwards transpilable.
+- New CSS features.
+- Base technologies stayed the same.
 
 </Notes>
 
 ---
 
-We want to understand the path we took to get to today. With that knowledge we want to understand where we are. My motivation: did this with three generations of ES.
+<SlideHeadline sectionTitle='WebDev'>Big players</SlideHeadline>
+
+<LargeImage src={imgStateFrameworks} />
+
+<Credit credit="State of JavaScript 2019" creditLink="https://2019.stateofjs.com/overview/" />
+
+<Notes>
+
+- React: The functional JavaScript rendering library
+- Angular: Good for Java Devs Framework with awesome docs
+
+</Notes>
 
 ---
 
-Early Websites were simple documents.
+<SlideHeadline sectionTitle='Future'>🔮</SlideHeadline>
 
-(Super simple Website demo)
+- Progressive Web Apps (PWA)
+- Hybrid Apps
+- CSS in JS
+- WebComponents
 
----
+<Boids />
 
-Slowly we gained styling.
+<Notes>
 
-90s hype
+- All of these have been coming for years.
 
----
-
-More functionality came to websites.
-
-First were Java Applets.
-
-JS was born and Flash.
+</Notes>
 
 ---
 
-Functionality moved more and more to the frontend.
+<SlideHeadline sectionTitle='This talk'>summary</SlideHeadline>
+
+- Base technologies are not build for what we do.
+- Amazing tooling supports modern webdevs.
+- Things are now changing slowly.
+- The future is exciting.
+
+<Boids />
 
 ---
 
-Slowly bundling tools got important because massive JS needed to be organized into multiple files. That needed to be "bundled" for the browser.
+<Central>
 
----
+<OpeningSlide
+  title="A short history of webdevs future 🔮"
+  subtitle="The End."
+  author='Hendrik Wallbaum'
+/>
 
-Module systems started to appear.
-
----
-
-Build tools take over more and more. That lays the groundwork for React, etc.
-
----
-
-Somewhere in-between SASS and similar arise.
-
----
-
-Today we are moving into a stable phawse of web-development with established tools, ecosystems and standards.
+</Central>

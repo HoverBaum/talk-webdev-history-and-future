@@ -3,13 +3,18 @@ import { css, jsx } from '@emotion/core'
 import Credit from './credit'
 import useColors from '../lib/useColors'
 
-export const BackgroundImage = ({ src, credit, creditLink }) => {
+export const BackgroundImage = ({ src, credit, creditLink, blur }) => {
   const color = useColors()
   return (
     <div
       css={css`
         background: url(${src}) no-repeat center;
         background-size: cover;
+        ${blur
+          ? css`
+              filter: blur(10px);
+            `
+          : ''}
         width: 100vw;
         height: 100vh;
         position: absolute;

@@ -8,7 +8,7 @@ const Boids = () => (
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 25rem;
+      width: 22rem;
     `}
     src={imgBoids}
   />

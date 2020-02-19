@@ -28,6 +28,7 @@ import Website from './components/website/Website'
 import MfWebsite from './components/website/Mf-Website'
 import BetterMfWebsite from './components/website/Better-Mf-Website'
 import Boids from './components/boids/Boids'
+import ClosingSlide from './components/closing-slide'
 
 
 import imgPotential from './img/potential.jpg'
@@ -46,37 +47,43 @@ import imgPWA from './img/pwa.png'
   <title>Webdevs history</title>
 </Head>
 
-<Central>
-
 <OpeningSlide
   title="A short history of webdevs future 🔮"
   subtitle="An introduction and reminder."
   author='Hendrik Wallbaum'
 />
 
-</Central>
-
 <BackgroundBubbles />
 
 ---
 
-<SlideHeadline sectionTitle='This talk'><span style="line-height: 1em;">🔮</span></SlideHeadline>
+<SlideHeadline sectionTitle='This talk'><span style="line-height: 1em;">Speaker</span></SlideHeadline>
 
 <CustomSplit>
 
-<div>
+<Center>
 
-In this talk you will learn about webdevs:
+<Portrait src={imgPortrait} />
 
-- Past
-- Present
-- Future
+</Center>
 
-</div>
+## <PrimaryColored>Hendrik</PrimaryColored>
 
-<Portrait src={imgPortrait} title="JS Enthusiast and developer for fun 🎉" />
+Developer for fun 🎉
+
+Consultant from <a href="https://netlight.com" target="_blank">Netlight</a>
 
 </CustomSplit>
+
+---
+
+<OpeningSlide
+  title={
+    <span style="text-align: center; display: block;">
+      Past → <PrimaryColored>Present</PrimaryColored> → Future
+    </span>
+  }
+/>
 
 <Notes>
 
@@ -146,11 +153,18 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 <ImageSplit src={imgCSS}>
 
-### CSS (Cascading Style Sheets)
+### CSS
 - The look and feel
 - Multiple posibilities for same content ([cssZenGarden](http://www.csszengarden.com/))
 
 </ImageSplit>
+
+<Notes>
+
+- Cascading StyleSheets.
+- New ones overwrite previous rules - cascading.
+
+</Notes>
 
 ---
 
@@ -159,6 +173,7 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 <ImageSplit src={imgJS}>
 
 ### JavaScript
+
 - The interaction.
 - Do something when the user interacts with the page.
 - Famously developed in 10 days.
@@ -168,7 +183,7 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 ---
 
-<SlideHeadline sectionTitle='The Internet'>(slightly simplified)</SlideHeadline>
+<SlideHeadline sectionTitle='The Internet'>"Slightly" simplified</SlideHeadline>
 
 <Center>
 
@@ -178,11 +193,11 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 ---
 
-<SlideHeadline sectionTitle='Web requests'>(masively simplified)</SlideHeadline>
+<SlideHeadline sectionTitle='Web requests'>Masively simplified</SlideHeadline>
 
 <Center>
 
-<img src={imgRequest} />
+<img src={imgRequest} style="margin-top: 10vh;" />
 
 </Center>
 
@@ -213,10 +228,12 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 ---
 
-<SlideHeadline sectionTitle='WebDev'></SlideHeadline>
+<SlideHeadline sectionTitle='WebDev'>NodeJS</SlideHeadline>
 
 <Center>
-<img src={imgNode} />
+
+<img src={imgNode} style="margin-top: 10vh;"/>
+
 </Center>
 
 <Notes>
@@ -246,13 +263,9 @@ I don't think we've even seen the tip of the iceberg. I think the potential of w
 
 ---
 
-<BackgroundImage src={imgCreative} />
+<BackgroundImage blur src={imgCreative} />
 
-<Impact onImage>
-
-Creative years
-
-</Impact>
+<OpeningSlide title="Creative years" />
 
 <Notes>
 
@@ -333,7 +346,7 @@ Creative years
 
 ---
 
-<SlideHeadline sectionTitle='This talk'>summary</SlideHeadline>
+<SlideHeadline sectionTitle='This talk'>Summary</SlideHeadline>
 
 - Base technologies are not build for what we do.
 - Amazing tooling supports modern webdevs.
@@ -345,12 +358,9 @@ Creative years
 
 ---
 
-<Central>
-
-<OpeningSlide
+<ClosingSlide
   title="A short history of webdevs future 🔮"
-  subtitle="The End."
   author='Hendrik Wallbaum'
 />
 
-</Central>
+<Boids left />

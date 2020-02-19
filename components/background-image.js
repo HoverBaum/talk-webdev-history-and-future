@@ -1,10 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import Credit from './credit'
-import useColors from '../lib/useColors'
 
-export const BackgroundImage = ({ src, credit, creditLink, blur }) => {
-  const color = useColors()
+export const BackgroundImage = ({
+  src,
+  credit,
+  creditLink,
+  blur,
+  children
+}) => {
   return (
     <div
       css={css`
@@ -12,12 +16,13 @@ export const BackgroundImage = ({ src, credit, creditLink, blur }) => {
         background-size: cover;
         ${blur
           ? css`
-              filter: blur(10px);
+              filter: blur(5px);
             `
           : ''}
         width: 100vw;
         height: 100vh;
         position: absolute;
+        z-index: 0;
         top: 0;
         left: 0;
         &:after {
@@ -37,6 +42,7 @@ export const BackgroundImage = ({ src, credit, creditLink, blur }) => {
         }
       `}
     >
+      {children && children}
       {credit ? <Credit credit={credit} creditLink={creditLink} onImage /> : ''}
     </div>
   )

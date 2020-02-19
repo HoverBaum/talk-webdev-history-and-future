@@ -13,7 +13,7 @@ const SlideHeadline = ({ children, sectionTitle }) => {
         font-weight: 300;
         color: ${colors.headline};
         margin-top: 0;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.66em;
       `}
     >
       {sectionTitle && (

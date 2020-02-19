@@ -13,6 +13,7 @@ const resetStyles = css`
     color: black;
     font-family: serif;
     font-size: 1rem;
+    background-color: white;
   }
   /* HTML5 blocks - needed in older browsers */
   & article,

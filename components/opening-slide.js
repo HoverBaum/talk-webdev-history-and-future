@@ -7,50 +7,68 @@ import useColors from '../lib/useColors'
 const OpeningSlide = ({ title, author, subtitle, title2 }) => {
   const colors = useColors()
   return (
-    <hgroup>
-      <h1
-        css={{
-          margin: 0,
-          fontSize: '2.5em',
-          color: colors.headline,
-          borderBottom: `1px solid ${colors.headline}`,
-          paddingBottom: '1rem'
-        }}
+    <div
+      css={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        height: '100%',
+        width: '100%'
+      }}
+    >
+      <hgroup
+        css={css`
+          z-index: 1;
+        `}
       >
-        {title}
-        {title2 ? ' - ' : ''}
-        {title2 ? <span style={{ color: colors.primary }}>{title2}</span> : ''}
-      </h1>
-      {subtitle && (
-        <h4
+        <h1
           css={{
-            marginTop: '2rem',
-            color: colors.primary
+            margin: 0,
+            fontSize: '2.5em',
+            color: colors.headline,
+            borderBottom: `1px solid ${colors.headline}`,
+            paddingBottom: '1rem'
           }}
         >
-          {subtitle}
-        </h4>
-      )}
-      {author && (
-        <a
-          href="https://hendrikwallbaum.de"
-          target="_blank"
-          css={{ textDecoration: 'none' }}
-        >
+          {title}
+          {title2 ? ' - ' : ''}
+          {title2 ? (
+            <span style={{ color: colors.primary }}>{title2}</span>
+          ) : (
+            ''
+          )}
+        </h1>
+        {subtitle && (
           <h4
-            css={css`
-              color: ${colors.primary};
-              text-align: right;
-              position: absolute;
-              bottom: 0;
-              right: 4rem;
-            `}
+            css={{
+              marginTop: '2rem',
+              color: colors.primary
+            }}
           >
-            by {author}
+            {subtitle}
           </h4>
-        </a>
-      )}
-    </hgroup>
+        )}
+        {author && (
+          <a
+            href="https://hendrikwallbaum.de"
+            target="_blank"
+            css={{ textDecoration: 'none' }}
+          >
+            <h4
+              css={css`
+                color: ${colors.primary};
+                text-align: right;
+                position: absolute;
+                bottom: 2rem;
+                right: 6rem;
+              `}
+            >
+              by {author}
+            </h4>
+          </a>
+        )}
+      </hgroup>
+    </div>
   )
 }
 

@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/core'
 import useColors from '../lib/useColors'
 
-const ClosingSlide = ({ title, author }) => {
+const ClosingSlide = ({ title, author, repoLink }) => {
   const colors = useColors()
   return (
     <div
@@ -43,6 +43,19 @@ const ClosingSlide = ({ title, author }) => {
             >
               {author}
             </h4>
+          </a>
+        )}
+        {repoLink && (
+          <a href={repoLink} target="_blank" css={{ textDecoration: 'none' }}>
+            <p
+              css={css`
+                color: ${colors.primary};
+                opacity: 0.5;
+                font-size: 0.66em;
+              `}
+            >
+              Deck on GitHub
+            </p>
           </a>
         )}
       </hgroup>
